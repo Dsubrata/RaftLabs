@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<AssemblyName>RaftLabs.Enterprise.Logger</AssemblyName>
+		<RootNamespace>RaftLabs.Enterprise.Logger</RootNamespace>
+		<Authors>Accetion</Authors>
+		<Company>Accetion</Company>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Platforms>AnyCPU;x64;ARM64</Platforms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Version>2.3.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="aliyun-log-csharp-sdk" Version="1.0.1" />
+		<PackageReference Include="AWS.Logger.Log4net" Version="3.3.1" />
+		<PackageReference Include="AWSSDK.Core" Version="4.0.0.12" />
+		<PackageReference Include="Log4ALA" Version="2.6.0" />
+		<PackageReference Include="AWS.Logger.NLog" Version="3.1.0" />
+		<PackageReference Include="Microsoft.ApplicationInsights" Version="2.21.0" />
+		<PackageReference Include="Microsoft.ApplicationInsights.DependencyCollector" Version="2.21.0" />
+		<PackageReference Include="Microsoft.ApplicationInsights.NLogTarget" Version="2.21.0" />
+		<PackageReference Include="Google.Cloud.Diagnostics.AspNetCore" Version="4.4.0" />
+		<PackageReference Include="OCI.DotNetSDK.Loggingingestion" Version="63.1.0" />
+		<PackageReference Include="Serilog" Version="2.12.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+		<PackageReference Include="System.Diagnostics.EventLog" Version="7.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="App.config" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Services\DBLogger.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\RaftLabs.Enterprise.Configuration\RaftLabs.Enterprise.Configuration.csproj" />
+	</ItemGroup>
+</Project>
