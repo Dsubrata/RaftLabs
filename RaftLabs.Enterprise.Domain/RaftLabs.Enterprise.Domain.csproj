@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<AssemblyName>RaftLabs.Enterprise.Domain</AssemblyName>
+		<RootNamespace>RaftLabs.Enterprise.Domain</RootNamespace>
+		<Platforms>AnyCPU;x64;ARM64</Platforms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Version>5.8.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="14.0.0" />
+	  <PackageReference Include="Azure.AI.FormRecognizer" Version="4.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Enums\" />
+	  <Folder Include="Helpers\" />
+	</ItemGroup>
+</Project>
