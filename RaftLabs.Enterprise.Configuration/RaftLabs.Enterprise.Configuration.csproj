@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AssemblyName>RaftLabs.Enterprise.Configuration</AssemblyName>
+		<RootNamespace>RaftLabs.Enterprise.Configuration</RootNamespace>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>Accetion</Authors>
+		<Company>Accetion</Company>
+		<Copyright>Accetion</Copyright>
+		<Platforms>AnyCPU;x64;ARM64</Platforms>
+		<Version>5.2.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="EnhanceAI\**" />
+	  <EmbeddedResource Remove="EnhanceAI\**" />
+	  <None Remove="EnhanceAI\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\RaftLabs.Enterprise.Utility\RaftLabs.Enterprise.Utility.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AWSSDK.Core" Version="4.0.0.12" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.4" />
+	</ItemGroup>
+</Project>
