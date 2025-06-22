@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<UserSecretsId>4f181a4a-c153-4648-9934-8049b94eb1d8</UserSecretsId>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Version>15.8.0</Version>
+		<AssemblyName>RaftLabs.Enterprise.WebAPI</AssemblyName>
+		<RootNamespace>RaftLabs.Enterprise.WebAPI</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="MappingFiles\**" />
+		<Content Remove="MappingFiles\**" />
+		<EmbeddedResource Remove="MappingFiles\**" />
+		<None Remove="MappingFiles\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http.Polly" Version="9.0.6" />
+		<PackageReference Include="Polly.Extensions.Http" Version="3.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Facades\" />
+	  <Folder Include="Interfaces\Facades\" />
+	  <Folder Include="Models\" />
+	  <Folder Include="Properties\PublishProfiles\" />
+	  <Folder Include="Properties\ServiceDependencies\" />
+	  <Folder Include="Utilities\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\RaftLabs.Enterprise.Configuration\RaftLabs.Enterprise.Configuration.csproj" />
+	  <ProjectReference Include="..\RaftLabs.Enterprise.Database\RaftLabs.Enterprise.Database.csproj" />
+	  <ProjectReference Include="..\RaftLabs.Enterprise.Logger\RaftLabs.Enterprise.Logger.csproj" />
+	  <ProjectReference Include="..\RaftLabs.Enterprise.Utility\RaftLabs.Enterprise.Utility.csproj" />
+	</ItemGroup>
+
+
+</Project>
